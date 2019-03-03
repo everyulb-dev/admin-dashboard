@@ -1,0 +1,68 @@
+.tasks-content {
+    height: 400px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+.tasks-content::-webkit-scrollbar {
+    width: 9px;
+    background-color: #F5F5F5;
+} 
+
+.tasks-content::-webkit-scrollbar-thumb {
+    background-color: #D8D8D8;
+    border-radius: 10px;
+}
+
+.overdue {
+    background: #ED3D28;
+    width: 193px;
+    height: 27px;
+    border-radius: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.duesoon {
+    background: #FFAA0A;
+    width: 193px;
+    height: 27px;
+    border-radius: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+/* @media only screen 
+  and (min-device-width: 800px) 
+  and (max-device-width: 1280px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .overdue {
+        background: #ED3D28;
+        width: 150px;
+        height: 27px;
+        border-radius: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+    
+    .duesoon {
+        background: #FFAA0A;
+        width: 150px;
+        height: 27px;
+        border-radius: 14px;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 27px;
+    }
+} */

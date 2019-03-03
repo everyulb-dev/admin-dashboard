@@ -1,0 +1,124 @@
+<div class="monitoring-section">
+
+  <div class="section-header">
+      <mat-card>Reports</mat-card>
+  </div>
+
+
+  <div class="section-wrapper">
+      <section>
+          <mat-card>
+            <div class="report-content">
+                <div class="icon" style="background-color: #23AE89;">
+                    <i class="fa fa-trash" style="color: white; font-size: 40px; display: block; margin: 15px auto;"></i>
+                </div>
+                <section>
+                  <h3>1.2 MT</h3>
+                  <h5>Generation</h5>
+                </section>
+            </div>
+          </mat-card>
+      </section>
+      <section>
+          <mat-card>
+              <div class="report-content">
+                    <div class="icon" style="background-color: #2EC1CC;">
+                        <i class="fa fa-snowflake" style="color: white; font-size: 40px; display: block; margin: 15px auto"></i>
+                    </div>
+                  <section>
+                    <h3>100 KG</h3>
+                    <h5>Compost</h5>
+                  </section>
+              </div>
+          </mat-card>
+      </section>
+      <section>
+          <mat-card>
+              <div class="report-content">
+                    <div class="icon" style="background-color: #FFB61C;">
+                        <i class="fa fa-recycle" style="color: white; font-size: 40px; display: block; margin: 15px auto"></i>
+                    </div>
+                  <section>
+                    <h3>80 KG</h3>
+                    <h5>Recyclables</h5>
+                  </section>
+              </div>
+          </mat-card>
+      </section>
+      <section>
+          <mat-card>
+              <div>
+                  <section>
+                        <mat-radio-group class="example-radio-group" [(ngModel)]="selectedValue">
+                            <mat-radio-button class="example-radio-button" [value]="'Daily'">Daily</mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'Monthly'">Monthly</mat-radio-button>
+                            <mat-radio-button class="example-radio-button" [value]="'Annually'">Annually</mat-radio-button>
+                        </mat-radio-group>
+                  </section> 
+              </div>
+          </mat-card>
+      </section>
+    
+  </div>
+
+  <div class="footer-content">
+    <section>
+        <mat-card>
+                <div class="chart-wrapper">
+                    <div style="display: block">
+                        <canvas baseChart
+                            [data]="pieChartData"
+                            [labels]="pieChartLabels"
+                            [chartType]="pieChartType"
+                            (chartHover)="chartHovered($event)"
+                            (chartClick)="chartClicked($event)"></canvas>
+                    </div>
+                    <!-- <div class="legend">
+                        <div class="legend-title">
+                            <ul>
+                                <li *ngFor="let label of pieChartLabels"><p>{{ label}}</p></li>
+                            </ul>
+                        </div>
+                        <div class="legend-data">
+                            <ul>
+                                <li *ngFor="let data of pieChartData"><p>{{ data | number:'.2' }}</p></li>
+                            </ul>
+                        </div>
+                    </div> -->
+                </div>
+        </mat-card>
+    </section>
+    <!-- <section>
+        <mat-card>
+                Revenue
+        </mat-card>
+    </section> -->
+    <section class="panel panel-box">
+        <div class="panel-top bg-info">
+            <div class="text-left">
+                Revenue
+            </div>
+            <div class="divider divider-xl"></div>
+        </div>
+        <div class="panel-icon bg-info">
+            <i class="fa fa-rupee-sign" style="color: white;"></i>
+        </div>
+        <div class="panel-bottom bg-reverse">
+            <ul class="list-justified text-center">
+                <li>
+                    <p class="size-h2 color-info">92k</p>
+                    <p class="text-muted">User Charge</p>
+                </li>
+                <li>
+                    <p class="size-h2 color-success">5k</p>
+                    <p class="text-muted">Sale of Compost</p>
+                </li>
+                <li>
+                    <p class="size-h2 color-infoAlt">120k</p>
+                    <p class="text-muted">Expenditure</p>
+                </li>                        
+            </ul>
+        </div>
+    </section>
+  </div>
+</div>
