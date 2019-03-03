@@ -8,3 +8,23 @@ const routes: Routes = [];
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+export const AppRoutes: Routes = [
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'signin',
+    loadChildren: './modules/login/login.module#LoginModule'
+  },
+  {
+    path: 'home',
+    loadChildren: ''
+  },
+  {
+      path: 'resetpassword',
+      loadChildren: ''
+  }
+];
