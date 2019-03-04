@@ -1,30 +1,22 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes }  from '@angular/router';
 
-const routes: Routes = [];
+
+const appRoutes: Routes = [
+  { path: '',   redirectTo: 'login', pathMatch: 'full' },
+  { path: 'dashboard', redirectTo: 'dashboard', pathMatch: 'full'},
+  { path: '**', redirectTo: 'login'}
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(
+      appRoutes,
+    //   { enableTracing: true } // <-- debugging purposes only
+    )
+  ],
+  exports: [
+    RouterModule
+  ]
 })
-export class AppRoutingModule { }
-
-export const AppRoutes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'signin',
-    loadChildren: './modules/login/login.module#LoginModule'
-  },
-  {
-    path: 'home',
-    loadChildren: ''
-  },
-  {
-      path: 'resetpassword',
-      loadChildren: ''
-  }
-];
+export class AppRoutingModule {}
